@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(BoxCollider2D))]
 public class PlayerMovementController : MonoBehaviour
 {
     public float speed = 1.0f;
@@ -12,6 +13,7 @@ public class PlayerMovementController : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        Debug.Assert(gameObject.CompareTag("Player") == true);
     }
 
     void Update() 
