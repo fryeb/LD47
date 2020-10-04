@@ -376,6 +376,23 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2808704250563017420}
   m_PrefabAsset: {fileID: 0}
+--- !u!320 &659078376
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659078374}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 72c8748e0241c29168b8bdf2b4b289f6, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &978737926
 GameObject:
   m_ObjectHideFlags: 0
