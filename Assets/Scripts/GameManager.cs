@@ -20,28 +20,28 @@ public class GameManager : MonoBehaviour
         player = GameObject.FindWithTag("Player").transform;
         spawnPoint = player.position;
 
-        exitStage.SetActive(false);
+        exitStage.SetActiveRecursively(false);
         foreach (GameObject stage in stages)
-            stage.SetActive(false);
-        stages[currentStageIndex].SetActive(true);
+            stage.SetActiveRecursively(false);
+        stages[currentStageIndex].SetActiveRecursively(true);
     }
 
     private void SwitchStage(int newStageIndex)
     {
         Debug.Assert(currentStageIndex != newStageIndex);
         Debug.Assert(currentStageIndex != -1);
-        stages[currentStageIndex].SetActive(false);
+        stages[currentStageIndex].SetActiveRecursively(false);
         currentStageIndex = newStageIndex;
 
         if (newStageIndex == -1)
         {
-            exitStage.SetActive(true);
+            exitStage.SetActiveRecursively(true);
         }
         else
         {
             currentStageIndex %= stages.Length;
-            exitStage.SetActive(false);
-            stages[currentStageIndex].SetActive(true);
+            exitStage.SetActiveRecursively(false);
+            stages[currentStageIndex].SetActiveRecursively(true);
         }
     }
 
